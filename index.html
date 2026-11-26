@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caffe Margo — Kedai Kopi Minimalis</title>
+  <meta name="description" content="Caffe Margo — kedai kopi minimalis dengan biji pilihan, menu kopi & kue, suasana tenang di ujung senja. Lihat menu dan harga.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ordering.css">
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="atas">
+    <div class="container header-inner">
+      <a class="brand" href="#beranda" aria-label="Caffe Margo — beranda">
+        <img class="brand-mark" src="assets/logo.png" alt="" width="28" height="28">
+        <span class="brand-name">Caffe Margo</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigasi utama">
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#kunjungi">Kunjungi Kami</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-list">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="konten">
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="beranda">
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Kedai Kopi · Biji Pilihan · Suasana Tenang</p>
+          <h1 class="hero-title">Caffe Margo</h1>
+          <p class="hero-tagline">Secangkir kehangatan di ujung senja.</p>
+          <p class="hero-desc">
+            Biji kopi pilihan, dipanggang dengan cermat, disajikan dalam ruang yang bersih,
+            tenang, dan nyaman — sempurna untuk memulai hari dan melawan kerasnya dunia.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#menu">Lihat Menu</a>
+            <a class="btn btn-ghost" href="#kunjungi">Kunjungi Kami</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-art">
+            <img src="assets/hero.png" alt="Suasana kedai Caffe Margo" width="508" height="491" decoding="async">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ===== Tentang ===== -->
+    <section class="section about" id="tentang">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Tentang Kami</p>
+          <h2 class="section-title">Kopi yang tenang, rasa yang tulus.</h2>
+          <p class="section-sub">
+            Caffe Margo hadir sebagai ruang kecil untuk berhenti sejenak dari kerasnya dunia. Kami percaya secangkir kopi
+            yang baik lahir dari bahan yang baik dan ketenangan yang sederhana. Kamu boleh ribak sude, tapi kamu juga perlu istirahat.
+          </p>
+        </header>
+
+        <div class="values">
+          <article class="value-card reveal">
+            <div class="value-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21c-4-3-7-6.5-7-10a7 7 0 0 1 14 0c0 3.5-3 7-7 10z"/>
+                <path d="M12 11V8"/>
+              </svg>
+            </div>
+            <h3>Biji Kopi Pilihan</h3>
+            <p>Biji berkualitas dipilih dengan cermat dan dipanggang dengan keseimbangan rasa.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <div class="value-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 11h14a7 7 0 0 1-14 0z"/>
+                <path d="M12 11V7"/>
+                <path d="M9 4h6"/>
+              </svg>
+            </div>
+            <h3>Kue &amp; Roti Segar</h3>
+            <p>Kue, croissant, dan roti hangat disiapkan setiap hari untuk pendamping kopi Anda.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <div class="value-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11h18l-1.5 8a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2L3 11z"/>
+                <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+              </svg>
+            </div>
+            <h3>Makanan &amp; Minuman</h3>
+            <p>Hidangan makan dan minum lengkap, disajikan hangat dan segar untuk menemani santai Anda.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <div class="value-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+              </svg>
+            </div>
+            <h3>Ruang yang Nyaman</h3>
+            <p>Desain bersih, pencahayaan lembut, dan suasana tenang untuk bekerja atau berbincang.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Menu ===== -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Menu</p>
+          <h2 class="section-title">Minuman &amp; Makanan</h2>
+          <p class="section-sub">Pilihan sederhana, rasa yang pas.</p>
+        </header>
+
+        <div class="menu-tabs reveal" role="tablist" aria-label="Kategori menu">
+          <button class="tab is-active" type="button" role="tab" id="tab-kopi" aria-selected="true" aria-controls="menu-grid" data-filter="kopi">Kopi</button>
+          <button class="tab" type="button" role="tab" id="tab-kue" aria-selected="false" aria-controls="menu-grid" data-filter="kue">Kue</button>
+          <button class="tab" type="button" role="tab" id="tab-dessert" aria-selected="false" aria-controls="menu-grid" data-filter="dessert">Dessert</button>
+          <button class="tab" type="button" role="tab" id="tab-makanan" aria-selected="false" aria-controls="menu-grid" data-filter="makanan">Makanan</button>
+          <button class="tab" type="button" role="tab" id="tab-semua" aria-selected="false" aria-controls="menu-grid" data-filter="semua">Semua</button>
+        </div>
+
+        <div class="menu-grid reveal" id="menu-grid" role="tabpanel" aria-labelledby="tab-kopi">
+          <!-- ===== Kopi ===== -->
+          <article class="menu-card" data-category="kopi">
+            <div class="menu-card-head"><h3>Espresso</h3><span class="price">Rp 18.000</span></div>
+            <p>Konsentrat kopi murni, pekat dan beraroma.</p>
+          </article>
+          <article class="menu-card" data-category="kopi">
+            <div class="menu-card-head"><h3>Americano</h3><span class="price">Rp 20.000</span></div>
+            <p>Espresso dengan air panas, lembut dan bersih di mulut.</p>
+          </article>
+          <article class="menu-card" data-category="kopi">
+            <div class="menu-card-head"><h3>Kopi Tubruk</h3><span class="price">Rp 15.000</span></div>
+            <p>Kopi tradisional bubuk kasar, kaya rasa.</p>
+          </article>
+          <article class="menu-card" data-category="kopi">
+            <div class="menu-card-head"><h3>Senja Latte</h3><span class="price">Rp 28.000</span></div>
+            <p>Menu andalan kami: blend kopi khas Caffe Margo dengan susu segar.</p>
+          </article>
+          <article class="menu-card" data-category="kopi">
+            <div class="menu-card-head"><h3>Kopi Susu Gula Aren</h3><span class="price">Rp 22.000</span></div>
+            <p>Kopi susu manis dengan gula aren asli.</p>
+          </article>
+          <article class="menu-card" data-category="kopi">
+            <div class="menu-card-head"><h3>Cappuccino</h3><span class="price">Rp 25.000</span></div>
+            <p>Espresso, susu panas, dan foam lembut dalam keseimbangan.</p>
+          </article>
+          <article class="menu-card" data-category="kopi">
+            <div class="menu-card-head"><h3>Caffe Latte</h3><span class="price">Rp 25.000</span></div>
+            <p>Espresso lembut dengan susu panas, rasa halus.</p>
+          </article>
+          <article class="menu-card" data-category="kopi">
+            <div class="menu-card-head"><h3>Vanilla Latte</h3><span class="price">Rp 28.000</span></div>
+            <p>Latte dengan sentuhan vanilla yang manis dan lembut.</p>
+          </article>
+          <article class="menu-card" data-category="kopi">
+            <div class="menu-card-head"><h3>Caramel Macchiato</h3><span class="price">Rp 30.000</span></div>
+            <p>Layered espresso, susu, vanilla, dan saus karamel.</p>
+          </article>
+          <article class="menu-card" data-category="kopi">
+            <div class="menu-card-head"><h3>Caffe Mocha</h3><span class="price">Rp 28.000</span></div>
+            <p>Espresso, susu, dan coklat, dengan whipped cream.</p>
+          </article>
+          <article class="menu-card" data-category="kopi">
+            <div class="menu-card-head"><h3>Cold Brew</h3><span class="price">Rp 28.000</span></div>
+            <p>Kopi diseduh dingin 12 jam, rasa halus tanpa keasaman.</p>
+          </article>
+          <article class="menu-card" data-category="kopi">
+            <div class="menu-card-head"><h3>Affogato</h3><span class="price">Rp 30.000</span></div>
+            <p>Espresso panas di atas es krim vanilla.</p>
+          </article>
+
+          <!-- ===== Kue ===== -->
+          <article class="menu-card" data-category="kue">
+            <div class="menu-card-head"><h3>Croissant Butter</h3><span class="price">Rp 22.000</span></div>
+            <p>Renyah di luar, lembut di dalam, kaya mentega.</p>
+          </article>
+          <article class="menu-card" data-category="kue">
+            <div class="menu-card-head"><h3>Croissant Coklat</h3><span class="price">Rp 25.000</span></div>
+            <p>Croissant lembut dengan isian coklat.</p>
+          </article>
+          <article class="menu-card" data-category="kue">
+            <div class="menu-card-head"><h3>Cheesecake</h3><span class="price">Rp 32.000</span></div>
+            <p>Potongan cheesecake lembut dengan base renyah.</p>
+          </article>
+          <article class="menu-card" data-category="kue">
+            <div class="menu-card-head"><h3>Red Velvet</h3><span class="price">Rp 30.000</span></div>
+            <p>Cake merah lembut dengan lapisan cream cheese.</p>
+          </article>
+          <article class="menu-card" data-category="kue">
+            <div class="menu-card-head"><h3>Brownies Fudgy</h3><span class="price">Rp 20.000</span></div>
+            <p>Brownies coklat pekat, lembut, dan kaya rasa.</p>
+          </article>
+          <article class="menu-card" data-category="kue">
+            <div class="menu-card-head"><h3>Tiramisu</h3><span class="price">Rp 32.000</span></div>
+            <p>Kue kopi klasik dengan mascarpone dan kakao.</p>
+          </article>
+          <article class="menu-card" data-category="kue">
+            <div class="menu-card-head"><h3>Banana Bread</h3><span class="price">Rp 22.000</span></div>
+            <p>Roti pisang matang, lembut dengan chia seed.</p>
+          </article>
+          <article class="menu-card" data-category="kue">
+            <div class="menu-card-head"><h3>Pandan Cake</h3><span class="price">Rp 24.000</span></div>
+            <p>Cake lembut beraroma pandan dengan isian kaya.</p>
+          </article>
+          <article class="menu-card" data-category="kue">
+            <div class="menu-card-head"><h3>Muffin Blueberry</h3><span class="price">Rp 20.000</span></div>
+            <p>Muffin lembut dengan blueberry segar.</p>
+          </article>
+          <article class="menu-card" data-category="kue">
+            <div class="menu-card-head"><h3>Cookies Coklat</h3><span class="price">Rp 15.000</span></div>
+            <p>Cookies renyah dengan choco chip.</p>
+          </article>
+
+          <!-- ===== Dessert ===== -->
+          <article class="menu-card" data-category="dessert">
+            <div class="menu-card-head"><h3>Es Krim Salted Caramel</h3><span class="price">Rp 24.000</span></div>
+            <p>Es krim vanilla dengan saus karamel gurih.</p>
+          </article>
+          <article class="menu-card" data-category="dessert">
+            <div class="menu-card-head"><h3>Pudding Coklat</h3><span class="price">Rp 22.000</span></div>
+            <p>Pudding coklat lembut dengan saus coklat.</p>
+          </article>
+          <article class="menu-card" data-category="dessert">
+            <div class="menu-card-head"><h3>Mousse Coklat</h3><span class="price">Rp 24.000</span></div>
+            <p>Mousse coklat ringan, lembut, dan beraroma.</p>
+          </article>
+          <article class="menu-card" data-category="dessert">
+            <div class="menu-card-head"><h3>Fruit Sorbet</h3><span class="price">Rp 22.000</span></div>
+            <p>Sorbet buah segar, ringan, dan menyegarkan.</p>
+          </article>
+
+          <!-- ===== Makanan ===== -->
+          <article class="menu-card" data-category="makanan">
+            <div class="menu-card-head"><h3>Nasi Goreng</h3><span class="price">Rp 32.000</span></div>
+            <p>Nasi goreng khas, dengan telur, sayur, dan bumbu rempah.</p>
+          </article>
+          <article class="menu-card" data-category="makanan">
+            <div class="menu-card-head"><h3>Mie Goreng</h3><span class="price">Rp 33.000</span></div>
+            <p>Mie goreng kenyal dengan sayur dan bumbu gurih.</p>
+          </article>
+          <article class="menu-card" data-category="makanan">
+            <div class="menu-card-head"><h3>Ayam Geprek</h3><span class="price">Rp 35.000</span></div>
+            <p>Ayam goreng tepung digeprek dengan sambal, nasi hangat.</p>
+          </article>
+          <article class="menu-card" data-category="makanan">
+            <div class="menu-card-head"><h3>Rice Bowl</h3><span class="price">Rp 38.000</span></div>
+            <p>Nasi dengan lauk pilihan, sayur, dan saus, disajikan dalam mangkuk.</p>
+          </article>
+          <article class="menu-card" data-category="makanan">
+            <div class="menu-card-head"><h3>Spaghetti Lava</h3><span class="price">Rp 39.000</span></div>
+            <p>Spaghetti dengan saus lava pedas, keju, dan topping lezat.</p>
+          </article>
+          <article class="menu-card" data-category="makanan">
+            <div class="menu-card-head"><h3>Nasi Ayam Betutu</h3><span class="price">Rp 42.000</span></div>
+            <p>Nasi dengan ayam betutu berbumbu khas Bali, lembut dan aromatik.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Kunjungi Kami ===== -->
+    <section class="section visit" id="kunjungi">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Kunjungi Kami</p>
+          <h2 class="section-title">Datang, istirahat sejenak.</h2>
+          <p class="section-sub">Temui kami di lokasi yang nyaman. Sesuai senja, kami siap menyambut Anda.</p>
+        </header>
+
+        <div class="visit-grid">
+          <div class="visit-card reveal">
+            <h3>Jam Buka</h3>
+            <table class="hours">
+              <tbody>
+                <tr><th scope="row">Senin</th><td>17.00 – 23.00</td></tr>
+                <tr><th scope="row">Selasa</th><td>17.00 – 23.00</td></tr>
+                <tr><th scope="row">Rabu</th><td>17.00 – 23.00</td></tr>
+                <tr><th scope="row">Kamis</th><td>17.00 – 23.00</td></tr>
+                <tr><th scope="row">Jum'at</th><td>Tutup</td></tr>
+                <tr><th scope="row">Sabtu</th><td>17.00 – 23.30</td></tr>
+                <tr><th scope="row">Minggu</th><td>17.00 – 23.30</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="visit-card reveal">
+            <h3>Lokasi</h3>
+            <address class="address">
+              Caffe Margo<br>
+              Karyawan 3, Karang Tengah, Ciledug
+            </address>
+          </div>
+
+          <div class="visit-card reveal">
+            <h3>Kontak</h3>
+            <ul class="contact-list">
+              <li><span class="contact-label">Telepon</span><a href="tel:+6285243445671">085243445671</a></li>
+              <li><span class="contact-label">Email</span><a href="mailto:kedaikopimargo@gmail.com">kedaikopimargo@gmail.com</a></li>
+              <li><span class="contact-label">Instagram</span><a href="https://instagram.com/margocoffe11" target="_blank" rel="noopener noreferrer" aria-label="Instagram Caffe Margo">@margocoffe11</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">Caffe Margo</span>
+        <p class="muted">Kedai kopi minimalis. Secangkir kehangatan di ujung senja.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navigasi footer">
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#menu">Menu</a>
+        <a href="#kunjungi">Kunjungi Kami</a>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Caffe Margo. Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <!-- backend API Caffe Margo; sesuaikan URL -->
+  <script>window.CAFFEMARGO_API = window.CAFFEMARGO_API || "http://127.0.0.1:8081";</script>
+  <script src="shared/api.js" defer></script>
+  <!-- QR generator (CDN, opsional); ordering.js tetap jalan tanpa ini -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js" defer></script>
+  <script src="ordering.js" defer></script>
+</body>
+</html>

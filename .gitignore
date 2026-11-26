@@ -1,0 +1,36 @@
+# ---- Database biner / data (JANGAN commit) ----
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+db/*.db
+db/*.sqlite
+# XAMPP/MySQL data directory (jangan commit isi DB)
+mysql/data/
+data/
+# backup SQL dengan data sungguhan (biarkan schema/seed tetap di-track)
+*.dump
+*.bak
+
+# ---- Rahasia / environment ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+config.secret.*
+
+# ---- Dependency / build ----
+node_modules/
+vendor/
+dist/
+build/
+.cache/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

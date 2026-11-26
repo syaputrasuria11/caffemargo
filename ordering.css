@@ -1,0 +1,142 @@
+/* ordering.css — gaya pemesanan di menu Caffe Margo (terpisah dari styles.css) */
+
+/* kontrol per kartu */
+.order-controls {
+  display: flex; align-items: center; gap: 0.5rem; margin-top: 0.9rem;
+  border-top: 1px solid var(--line, #E7DED3); padding-top: 0.9rem; flex-wrap: wrap;
+}
+.ord-btn {
+  width: 30px; height: 30px; border-radius: 8px; border: 1px solid var(--line, #E7DED3);
+  background: #fff; color: var(--brown-strong, #3A2A1B); font-size: 1.05rem; line-height: 1;
+  display: inline-flex; align-items: center; justify-content: center; transition: background .2s ease, border-color .2s ease;
+}
+.ord-btn:hover { background: var(--green-soft, #EAF3E9); border-color: var(--green, #7FB77E); }
+.ord-qty { min-width: 1.4rem; text-align: center; font-variant-numeric: tabular-nums; font-weight: 600; }
+.ord-add {
+  margin-left: auto; padding: 0.45rem 0.9rem; border-radius: 999px;
+  background: var(--green, #7FB77E); color: var(--ink, #231A13); border: 1px solid transparent;
+  font-size: 0.85rem; font-weight: 600; transition: background .2s ease, transform .2s ease;
+}
+.ord-add:hover { background: var(--green-strong, #6AA368); transform: translateY(-1px); }
+
+/* floating action bar */
+.ord-fab {
+  position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 60;
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  padding: 0.8rem 1.2rem; border-radius: 999px;
+  background: var(--brown, #4B3621); color: #fff; border: 1px solid transparent;
+  box-shadow: 0 12px 32px -14px rgba(43,30,18,.45); font-weight: 600; font-size: 0.92rem;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.ord-fab:hover { transform: translateY(-2px); }
+.ord-fab.has-items { background: var(--green-strong, #6AA368); }
+.ord-fab-count {
+  min-width: 1.4rem; height: 1.4rem; padding: 0 .4rem; border-radius: 999px;
+  background: rgba(255,255,255,.22); display: inline-flex; align-items: center; justify-content: center; font-size: .78rem;
+}
+.ord-fab-total { font-variant-numeric: tabular-nums; opacity: .92; }
+
+/* panel */
+.ord-panel {
+  position: fixed; right: 1.25rem; bottom: 5.2rem; z-index: 61; width: min(92vw, 380px);
+  max-height: 76vh; overflow: auto; background: #fff; color: var(--ink, #231A13);
+  border: 1px solid var(--line, #E7DED3); border-radius: 16px; box-shadow: 0 24px 60px -24px rgba(43,30,18,.4);
+  padding: 1.1rem 1.2rem 1.2rem;
+}
+.ord-panel[hidden] { display: none; }
+.ord-panel-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: .8rem; }
+.ord-panel-head h3 { font-size: 1.15rem; }
+.ord-close { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--line, #E7DED3); background:#fff; }
+.ord-close:hover { background: var(--green-soft, #EAF3E9); }
+
+.ord-list { display: flex; flex-direction: column; gap: .5rem; margin-bottom: .8rem; }
+.ord-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .5rem 0; border-bottom: 1px dashed var(--line, #E7DED3); }
+.ord-row-info { display: flex; flex-direction: column; }
+.ord-row-info span { font-size: .82rem; color: var(--ink-soft, #6B5D52); }
+.ord-row-price { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+.ord-empty { color: var(--ink-soft, #6B5D52); font-size: .9rem; padding: .6rem 0 1rem; }
+.ord-empty[hidden] { display: none; }
+
+.ord-total-row { display: flex; justify-content: space-between; align-items: center; padding: .7rem 0; font-size: 1.05rem; border-top: 1px solid var(--line, #E7DED3); }
+.ord-total-row strong { font-variant-numeric: tabular-nums; }
+
+.ord-field { display: flex; flex-direction: column; gap: .3rem; margin: .55rem 0; font-size: .85rem; color: var(--ink-soft, #6B5D52); }
+.ord-field input, .ord-field select {
+  padding: .55rem .65rem; border: 1px solid var(--line, #E7DED3); border-radius: 10px; background:#fff; color: var(--ink,#231A13); font: inherit;
+}
+.ord-field input:focus, .ord-field select:focus { outline: 2px solid var(--green, #7FB77E); outline-offset: 1px; border-color: var(--green, #7FB77E); }
+
+.ord-pay {
+  width: 100%; margin-top: .7rem; padding: .8rem 1rem; border-radius: 999px;
+  background: var(--green, #7FB77E); color: var(--ink,#231A13); border: 1px solid transparent; font-weight: 700; font-size: .95rem;
+  transition: background .2s ease, transform .2s ease;
+}
+.ord-pay:hover { background: var(--green-strong, #6AA368); transform: translateY(-1px); }
+.ord-pay:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.ord-hint { font-size: .78rem; color: var(--ink-soft, #6B5D52); margin-top: .6rem; }
+
+/* toast */
+.ord-toast {
+  position: fixed; left: 50%; bottom: 5.4rem; transform: translateX(-50%); z-index: 70;
+  background: var(--brown-strong, #3A2A1B); color: #fff; padding: .75rem 1.1rem; border-radius: 12px;
+  box-shadow: 0 16px 40px -18px rgba(43,30,18,.5); font-size: .9rem; max-width: 90vw;
+}
+.ord-toast[hidden] { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ord-btn, .ord-add, .ord-pay, .ord-fab { transition: none; }
+}
+
+/* dua tombol: Tambah Pesan + stepper +- */
+.ord-add { padding:.45rem .9rem; border-radius:999px; background: var(--green,#7FB77E); color: var(--ink,#231A13); border:1px solid transparent; font-size:.85rem; font-weight:600; transition: background .2s ease, transform .2s ease; }
+.ord-add:hover { background: var(--green-strong,#6AA368); transform: translateY(-1px); }
+.ord-add[hidden] { display:none; }
+.ord-stepper { display:inline-flex; align-items:center; gap:.5rem; }
+.ord-stepper[hidden] { display:none; }
+
+/* metode pembayaran */
+.ord-pay-field { border:1px solid var(--line,#E7DED3); border-radius:10px; padding:.6rem .8rem; margin:.7rem 0 0; }
+.ord-pay-field legend { font-size:.85rem; color: var(--ink-soft,#6B5D52); padding:0 .3rem; }
+.ord-pay-options { display:flex; gap:.9rem; flex-wrap:wrap; }
+.ord-pay-opt { display:inline-flex; align-items:center; gap:.4rem; font-size:.9rem; }
+.ord-pay-opt input { accent-color: var(--green-strong,#6AA368); }
+
+/* langkah pembayaran khusus metode */
+.ord-payview { margin-top:.8rem; padding:.8rem .9rem; border:1px solid var(--green,#7FB77E); border-radius:12px; background: var(--green-soft,#EAF3E9); }
+.ord-payview[hidden] { display:none; }
+.ord-pay-title { font-weight:700; margin-bottom:.5rem; color: var(--brown-strong,#3A2A1B); }
+.ord-qr { display:flex; justify-content:center; margin:.5rem 0; }
+.ord-qr canvas, .ord-qr img { border-radius:10px; background:#fff; padding:8px; border:1px solid var(--line,#E7DED3); }
+.ord-pay-body { font-size:.86rem; color: var(--ink,#231A13); }
+.ord-pay-body p { margin:.4rem 0; }
+.ord-pay-note { font-size:.78rem; color: var(--ink-soft,#6B5D52); }
+.ord-pay-ok { margin-top:.7rem; }
+.ord-pay-ok[hidden] { display:none; }
+
+/* rincian rekening transfer */
+.ord-rek { margin:.5rem 0; border:1px solid var(--line,#E7DED3); border-radius:10px; background:#fff; padding:.6rem .75rem; }
+.ord-rek div { display:flex; justify-content:space-between; gap:1rem; padding:.25rem 0; }
+.ord-rek span { color: var(--ink-soft,#6B5D52); }
+.ord-rek-no { font-variant-numeric: tabular-nums; letter-spacing:.02em; }
+
+/* fallback QR */
+.ord-qr-fallback { text-align:center; font-size:.8rem; color: var(--ink-soft,#6B5D52); }
+.ord-qr-placeholder { width:150px; height:150px; margin:0 auto .5rem; border:1px dashed var(--line,#E7DED3); border-radius:10px; background:repeating-linear-gradient(45deg,#fff,#fff 6px,var(--cream,#F3ECE3) 6px,var(--cream,#F3ECE3) 12px); }
+.ord-qr code { word-break: break-all; }
+
+/* sub-metode transfer */
+.ord-transfer-sub { margin-top:.5rem; }
+.ord-transfer-sub[hidden] { display:none; }
+.ord-transfer-opt { justify-content: space-between; width: 100%; }
+.ord-transfer-num { font-variant-numeric: tabular-nums; color: var(--ink-soft,#6B5D52); font-size:.85rem; }
+
+.ord-rek-line span { color: var(--ink-soft,#6B5D52); }
+
+/* pilihan suhu minuman Hot / Iced */
+.ord-temp { display:inline-flex; border:1px solid var(--line,#E7DED3); border-radius:999px; overflow:hidden; background:#fff; }
+.ord-temp-btn { padding:.35rem .8rem; font-size:.82rem; font-weight:600; color: var(--ink-soft,#6B5D52); border:none; background:transparent; }
+.ord-temp-btn.is-active { background: var(--green,#7FB77E); color: var(--ink,#231A13); }
+.ord-temp-btn + .ord-temp-btn { border-left:1px solid var(--line,#E7DED3); }
+
+/* pilihan suhu di bawah tombol Tambah Pesan (bukan di samping) */
+.order-controls .ord-temp { flex-basis: 100%; width: 100%; margin-top: .45rem; }
